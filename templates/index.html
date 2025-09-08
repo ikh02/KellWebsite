@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <!-- LEFT: TEXT -->
+        <div class="hero-text">
+            <p>I strive to elevate brands through bold, expressive design that captures attention & tells an authentic story.</p>
+            <a href="{{ url_for('static', filename='files/CV.docx') }}" class="btn-cv" download="Fatima Harmoush - CV.docx">DOWNLOAD CV</a>
+            <div class="social-icons">
+    
+                <!-- 1. Email Link -->
+                <a href="mailto:kellthedesigner@gmail.com">
+                    <img src="{{ url_for('static', filename='images/1.png') }}" alt="Email Me"/>
+                </a>
+                
+                <!-- 2. Instagram Link -->
+                <a href="https://www.instagram.com/kellthedesigner" target="_blank">
+                    <img src="{{ url_for('static', filename='images/2.png') }}" alt="My Instagram"/>
+                </a>
+
+                <!-- 3. LinkedIn Link -->
+                <a href="https://www.linkedin.com/in/kellthedesigner" target="_blank">
+                    <img src="{{ url_for('static', filename='images/3.png') }}" alt="My LinkedIn"/>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- RIGHT: VISUAL -->
+        <div class="hero-visual">
+            <img class="illustration" src="{{ url_for('static', filename='images/illustration.png') }}" alt="Kell The Designer Illustration">
+        </div>
+    </div>
+</section>
+
+<section class="portfolio">
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">HIGHLIGHTS</button>
+        <button class="filter-btn" data-filter="posters">POSTERS</button>
+        <button class="filter-btn" data-filter="social">SOCIAL MEDIA</button>
+        <button class="filter-btn" data-filter="packaging">PACKAGING</button>
+        <button class="filter-btn" data-filter="branding">BRANDING</button>
+        <button class="filter-btn" data-filter="animation">ANIMATION</button>
+        <button class="filter-btn" data-filter="video">VIDEO EDITING</button>
+        <button class="filter-btn" data-filter="illustration">ILLUSTRATION</button>
+        <button class="filter-btn" data-filter="print">PRINT DESIGN</button>
+        <button class="filter-btn" data-filter="misc">MISCELLANEOUS</button>
+    </div>
+
+   <div class="portfolio-grid">
+        
+        <!-- Portfolio Item 1 -->
+        <div class="portfolio-item" data-category="posters">
+            <a href="{{ url_for('static', filename='images/portfolio1.jpg') }}">
+              <img src="{{ url_for('static', filename='images/portfolio1.jpg') }}" alt="Portfolio item 1">
+            </a>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="portfolio-item" data-category="social">
+            <a href="{{ url_for('static', filename='images/portfolio2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/portfolio2.jpg') }}" alt="Portfolio item 2">
+            </a>
+        </div>
+
+        <!-- Portfolio Item 3 -->
+        <div class="portfolio-item" data-category="branding">
+            <a href="{{ url_for('static', filename='images/portfolio3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/portfolio3.jpg') }}" alt="Portfolio item 3">
+            </a>
+        </div>
+
+        <!-- Portfolio Item 4 -->
+        <div class="portfolio-item" data-category="packaging">
+            <a href="{{ url_for('static', filename='images/portfolio4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/portfolio4.jpg') }}" alt="Portfolio item 4">
+            </a>
+        </div>
+
+        <!-- Portfolio Item 5 -->
+        <div class="portfolio-item" data-category="animation">
+            <a href="{{ url_for('static', filename='images/portfolio5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/portfolio5.jpg') }}" alt="Portfolio item 5">
+            </a>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="portfolio-item" data-category="video">
+            <a href="{{ url_for('static', filename='images/portfolio6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/portfolio6.jpg') }}" alt="Portfolio item 6">
+            </a>
+        </div>
+
+        <!-- Portfolio Item 7 -->
+        <div class="portfolio-item" data-category="illustration">
+            <a href="{{ url_for('static', filename='images/portfolio7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/portfolio7.jpg') }}" alt="Portfolio item 7">
+            </a>
+        </div>
+
+        <!-- Portfolio Item 8 -->
+        <div class="portfolio-item" data-category="print">
+            <a href="{{ url_for('static', filename='images/portfolio8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/portfolio8.jpg') }}" alt="Portfolio item 8">
+            </a>
+        </div>
+
+        <!-- Portfolio Item 9 -->
+        <div class="portfolio-item" data-category="misc">
+            <a href="{{ url_for('static', filename='images/portfolio9.jpg') }}">
+                <img src="{{ url_for('static', filename='images/portfolio9.jpg') }}" alt="Portfolio item 9">
+            </a>
+        </div>
+        </div>
+</section>
+{% endblock %}

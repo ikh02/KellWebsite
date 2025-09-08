@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container services-container">
+
+    <!-- Page Header -->
+    <header class="services-header">
+        <h1>My Services</h1>
+    </header>
+    
+    <!-- Pricing Note -->
+    <p class="pricing-note">
+        <em>Note: Actual pricing varies based on project complexity.</em>
+    </p>
+
+    <!-- Services Grid -->
+    <div class="services-grid">
+
+        <!-- Service Card 1: Branding -->
+        <div class="service-card">
+            <h3>Branding and Identity Design</h3>
+            <ul class="service-list">
+                <li>
+                    <span>Logo Design</span>
+                    <span class="price">Starting <strong>$150</strong></span>
+                </li>
+                <li>
+                    <span>Soft Branding</span>
+                    <span class="price">Starting <strong>$300</strong></span>
+                </li>
+                <li>
+                    <span>Full Brand Identity Package</span>
+                    <span class="price">Starting <strong>$800</strong></span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Service Card 2: Print Design -->
+        <div class="service-card">
+            <h3>Print Design</h3>
+            <ul class="service-list">
+                <li>
+                    <span>Packaging (per item)</span>
+                    <span class="price"><strong>$50 - $150</strong></span>
+                </li>
+                <li>
+                    <span>Poster/Flyer Design</span>
+                    <span class="price">Starting <strong>$35</strong></span>
+                </li>
+                <li>
+                    <span>Brochure Design</span>
+                    <span class="price">Starting <strong>$50</strong></span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Service Card 3: Motion Design -->
+        <div class="service-card">
+            <h3>Motion Design & Animation</h3>
+            <ul class="service-list">
+                <li>
+                    <span>Frame by Frame (per second)</span>
+                    <span class="price">Starting <strong>$10</strong></span>
+                </li>
+                <li>
+                    <span>2D Animation (10-15 seconds)</span>
+                    <span class="price">Starting <strong>$50</strong></span>
+                </li>
+                <li>
+                    <span>Animated Logo</span>
+                    <span class="price">Starting <strong>$50</strong></span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Service Card 4: Social Media -->
+        <div class="service-card">
+            <h3>Social Media Design</h3>
+            <ul class="service-list">
+                <li>
+                    <span>Social Media Post (per post)</span>
+                    <span class="price">Starting <strong>$10</strong></span>
+                </li>
+                <li>
+                    <span>Social Media Package (25 posts + 5 Reels)</span>
+                    <span class="price">Starting <strong>$300</strong></span>
+                </li>
+                <li>
+                    <span>Social Media Branding</span>
+                    <span class="price">Starting <strong>$100</strong></span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Service Card 5: Photo Editing -->
+        <div class="service-card">
+            <h3>Photo Editing & Retouching</h3>
+            <ul class="service-list">
+                <li>
+                    <span>Basic Photo Editing (per photo)</span>
+                    <span class="price">Starting <strong>$10</strong></span>
+                </li>
+                <li>
+                    <span>Photos Batch Editing (+30 Photos)</span>
+                    <span class="price">Starting <strong>$100</strong></span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Service Card 6: Illustration -->
+        <div class="service-card">
+            <h3>Illustration & Art</h3>
+            <ul class="service-list">
+                <li>
+                    <span>Digital Illustration</span>
+                    <span class="price">Starting <strong>$40</strong></span>
+                </li>
+                <li>
+                    <span>Graphite Portrait Drawing (A4)</span>
+                    <span class="price">Starting <strong>$50</strong></span>
+                </li>
+                <li>
+                    <span>Graphite Drawing (A4)</span>
+                    <span class="price">Starting <strong>$40</strong></span>
+                </li>
+            </ul>
+        </div>
+
+    </div> <!-- End of Services Grid -->
+</div>
+
+<!-- All styling for the services page is here -->
+<style>
+    .services-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+    }
+
+    /* Header: "My Services" */
+    .services-header {
+        text-align: center;
+        border-bottom: 1px solid #444;
+        padding-bottom: 1.5rem;
+        /* UPDATED: Reduced bottom margin */
+        margin-bottom: 1rem; 
+    }
+    .services-header h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin: 0;
+        color: var(--primary-purple);
+    }
+
+    /* Grid container for the cards */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+    }
+
+    /* Individual service card */
+    .service-card {
+        background-color: #1a1a1a;
+        padding: 1.5rem 2rem;
+        border-radius: 12px;
+        border: 1px solid #333;
+    }
+    .service-card h3 {
+        font-size: 1.5rem;
+        color: var(--primary-yellow);
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid #444;
+        padding-bottom: 1rem;
+    }
+
+    /* List of services within a card */
+    .service-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .service-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #2e2e2e;
+        color: var(--text-color);
+        font-weight: 600;
+    }
+    .service-list li:last-child {
+        border-bottom: none;
+    }
+
+    /* Price styling */
+    .price {
+        /* Corrected variable name */
+        color: var(--primary-purple); 
+        text-align: right;
+        flex-shrink: 0;
+        padding-left: 1rem;
+        font-weight: normal;
+    }
+    .price strong {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    
+    /* Note below the header */
+    .pricing-note {
+        text-align: center;
+        color: #aaa;
+        font-style: italic;
+        margin-bottom: 2rem; 
+        margin-top: 2rem; 
+
+    }
+</style>
+{% endblock %}
